@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+        <link href="styles.css" rel="stylesheet">
+        <title>Projeto: Assistente Preços WSP</title>
+        <script>
+            // DOM Content to Load
+            document.addEventListener('DOMContentLoaded', function() {
+
+                // Gotta disable the anchor <a></a> for the current page
+                // - identify the current url
+                // - find the anchor and disable it: find byhref
+                //window.onload = function(){
+                    let currentUrl = window.location.href;
+                    let browseOp = document.querySelector(`[href="${currentUrl}"]`);
+                    if (browseOp.id != "homeBt") {
+                        browseOp.style.pointerEvents = 'none';
+                        browseOp.style.color = 'rgb(115, 148, 215)';
+                        browseOp.style.backgroundColor = 'rgb(10, 44, 74)';
+                    };
+                //};
+            })
+
+        </script>
+    </head>
+    <body>
+
+        <!-- TO CHANGE AT EACH PAGE - TOP LIMIT -->
+        <div>
+            <section id="pageTitle">
+                <h1>
+                    Tabela de Preços
+                </h1>
+                <a class="homeBt" id="homeBt"
+                    href="https://super-duper-winner-45vrj9r6xrx2jvj-8080.app.github.dev/fase1/index.html">Home</a>
+            </section>
+            <section id="pageDescription">
+                <div>
+                    <table class="wolAndMulti" id="wol" style="display: inline-block; margin-right: 20px">
+                        <tr class="headerAndX">
+                            <th></th>
+                            <th></th>
+                            <th colspan="2">Anual</th>
+                            <th colspan="2">Vitalício</th>
+                        </tr>
+                        <tr>
+                            <td class="headerAndX"> <small><i> forma de pagamento </i></small> </td>
+                            <td class="headerAndX2"></td>
+                            <td class="headerAndX2">mensal</td>
+                            <td class="headerAndX2">anual</td>
+                            <td class="headerAndX2">mensal</td>
+                            <td class="headerAndX2">anual</td>
+                        </tr>
+                        <tr>
+                            <td class="headerAndX"> Recorrente <br> <small><i> ($ mês a mês) </i></small> </td>
+                            <td class="headerAndX2"> preço <br> <i> pontuação </i> </td>
+                            <td> R$ 162 <br> &nbsp </td>
+                            <td> R$ 1.944 <br> 0,5 </td>
+                            <td> R$ 266 <br> &nbsp </td>
+                            <td> R$ 3.192 <br> 0 </td>
+                        </tr>
+                        <tr>
+                            <td class="headerAndX"> Integral <br> <small><i> ($ no ato) </i></small> </td>
+                            <td class="headerAndX2"> preço <br> <i> pontuação </i> </td>
+                            <td> R$ 162 <br> &nbsp </td>
+                            <td> R$ 1.944 <br> 2 </td>
+                            <td> R$ 266 <br> &nbsp </td>
+                            <td> R$ 3.192 <br> 2,5 </td>
+                        </tr>
+                        <tr>
+                            <td class="headerAndX"> À Vista <br> <small><i>($ no ato) <br> (crédito ou pix) </i></small> </td>
+                            <td class="headerAndX2"> preço <br> <i> pontuação </i> <br> &nbsp </td>
+                            <td> &nbsp <br> &nbsp <br> &nbsp </td>
+                            <td> R$ 1.652 <br> 2,5 <br> &nbsp </td>
+                            <td> &nbsp <br> &nbsp <br> &nbsp </td>
+                            <td> R$ 2.872 <br> 3 <br> &nbsp </td>
+                        </tr>
+                    </table>
+
+                    <table class="wolAndMulti" id="wol" style="display: inline-block">
+                        <tr class="headerAndX">
+                            <th></th>
+                            <th></th>
+                            <th colspan="2">Anual</th>
+                            <th colspan="2">Vitalício</th>
+                        </tr>
+                        <tr>
+                            <td class="headerAndX"> <small><i> forma de pagamento </i></small> </td>
+                            <td class="headerAndX2"></td>
+                            <td class="headerAndX2">mensal</td>
+                            <td class="headerAndX2">anual</td>
+                            <td class="headerAndX2">mensal</td>
+                            <td class="headerAndX2">anual</td>
+                        </tr>
+                        <tr>
+                            <td class="headerAndX"> Recorrente <br> <small><i> ($ mês a mês) </i></small> </td>
+                            <td class="headerAndX2"> preço <br> <i> pontuação </i> </td>
+                            <td> R$ 50 <br> &nbsp </td>
+                            <td> R$ 600 <br> 0,5 </td>
+                            <td> R$ 50 <br> &nbsp </td>
+                            <td> R$ 600 <br> 0,5 </td>
+                        </tr>
+                        <tr>
+                            <td class="headerAndX"> Integral <br> <small><i> ($ no ato) </i></small> </td>
+                            <td class="headerAndX2"> preço <br> <i> pontuação </i> </td>
+                            <td> R$ 50 <br> &nbsp </td>
+                            <td> R$ 600 <br> 0,5 </td>
+                            <td> R$ 50 <br> &nbsp </td>
+                            <td> R$ 600 <br> 0,5 </td>
+                        </tr>
+                        <tr>
+                            <td class="headerAndX"> À Vista <br> <small><i>($ no ato) <br> (crédito ou pix) </i></small> </td>
+                            <td class="headerAndX2"> preço <br> <i> pontuação </i> <br> &nbsp </td>
+                            <td> &nbsp <br> &nbsp <br> &nbsp </td>
+                            <td> R$ 570 <br> 0,5 <br> &nbsp </td>
+                            <td> &nbsp <br> &nbsp <br> &nbsp </td>
+                            <td> R$ 600 <br> 0,5 <br> &nbsp </td>
+                        </tr>
+                    </table>
+
+                    <br><br>
+                </div>
+
+
+            </section>
+        </div>
+        <!-- TO CHANGE AT EACH PAGE - BOTTOM LIMIT -->
+
+        <div>
+            <section id="browse">
+                <a class="browseOption" id="price"
+                    href="https://super-duper-winner-45vrj9r6xrx2jvj-8080.app.github.dev/fase1/price.html">Tabela de Preços</a>
+                <a class="browseOption" id="simulation"
+                    href="https://super-duper-winner-45vrj9r6xrx2jvj-8080.app.github.dev/fase1/simulation.html">Simulação e Viabilidade</a>
+                <a class="browseOption" id="teste"
+                    href="https://super-duper-winner-45vrj9r6xrx2jvj-8080.app.github.dev/fase1/teste.html">Teste</a>
+            </section>
+
+        </div>
+    </body>
+</html>

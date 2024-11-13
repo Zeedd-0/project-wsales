@@ -1,0 +1,101 @@
+body {
+    background-color: rgb(5, 21, 36);
+    color: rgb(250, 250, 250);
+    margin-left: 20px;
+    margin-right: 20px;
+    text-align: center;
+}
+
+section {
+    margin-top: 30px;
+}
+
+h1 {
+    font-size: 16px;
+}
+
+#pageDescription {
+    font-size: 14px;
+    margin-left: 150px;
+    margin-right: 150px;
+    margin-bottom: 75px;
+    border-width: 1px;
+    border-color: rgb(0, 0, 0);
+}
+
+#browse {
+    display: flex;
+}
+
+.browseOption {
+    background-color: rgb(15, 65, 111);
+    color: rgb(250, 250, 250);
+    text-decoration: none;
+    text-align: center;
+    margin-left: 50px;
+    margin-right: 50px;
+    padding-top: 25px;
+    padding-bottom: 200px;
+    border-radius: 10px;
+    flex-basis: 100%;
+}
+
+.browseOption:hover {
+    background-color: rgb(6, 89, 237);
+    color: rgb(250, 250, 250);
+    transition: 0.7s;
+}
+
+
+#homeBt {
+    background-color: rgb(86, 11, 161);
+    color: rgb(250, 250, 250);
+    text-decoration: none;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 22px;
+    padding-left: 12px;
+    padding-right: 12px;
+    border-radius: 100%;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+}
+
+.wolAndMulti{
+    border: 2px solid white;
+    border-collapse: collapse;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+th {
+    text-align: center;
+}
+
+
+td {
+    color: rgb(0, 0, 0);
+    background-color: rgb(255, 255, 255);
+    border-bottom: 1px solid black;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 8px;
+    padding-top: 8px;
+    text-align: right;
+}
+
+.headerAndX{
+    color: rgb(255, 255, 255);
+    background-color: rgb(0, 0, 0);
+    border-bottom: none;
+    text-align: left;
+}
+
+.headerAndX2{
+    color: rgb(255, 255, 255);
+    background-color: rgb(68, 84, 106);
+    border-bottom: none;
+    text-align: left;
+}

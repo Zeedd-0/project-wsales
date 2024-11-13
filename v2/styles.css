@@ -1,0 +1,465 @@
+:root {
+    --bg-cl1: #051524;
+    --bg-cl2: #112840;
+    --bg-cl3: #0659ED;
+    --bg-cl4: #631877;
+    --cl1: white;
+    --cl2: #59A8D2;
+    --cl3: #91929C;
+    --fs06rem: 0.6rem;
+    --fs07rem: 0.7rem;
+    --fs075rem: 0.75rem;
+
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--bg-cl1);
+    color: var(--cl1);
+    font-family: Verdana, sans-serif;
+}
+
+/*********************************/
+/*********************************/
+/*            GENERAL            */
+/*********************************/
+/*********************************/
+h2 {
+    margin-bottom: 0.7rem;
+}
+
+h3 {
+    font-size: 1rem;
+}
+
+.flex {
+    display: flex;
+}
+
+.flex-row {
+    flex-direction: row;
+}
+
+.flex-column {
+    flex-direction: column;
+}
+
+.block {
+    display: block;
+}
+
+.grid {
+    display: grid;
+}
+
+.space-between {
+    justify-content: space-between;
+}
+
+.t-right {
+  text-align: right;
+}
+
+.t-left {
+  text-align: left;
+}
+
+.t-center {
+  text-align: center;
+}
+
+.v-top {
+  vertical-align: top;
+}
+
+.v-bottom {
+  vertical-align: bottom;
+}
+
+.v-middle {
+  vertical-align: middle;
+}
+
+.f-normal {
+    font-weight: normal;
+}
+
+/*********************************/
+/*********************************/
+/*            HEADER             */
+/*********************************/
+/*********************************/
+
+header {
+    background-color: var(--bg-cl2);
+    width: 100vw;
+    height: 4rem;
+    justify-content: flex-end;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+}
+
+ul {
+    height: 100%;
+    width: max(25vw, 300px);
+    margin: 0 50px;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+a {
+    text-decoration: none;
+    color: var(--cl1);
+}
+
+nav ul > li {
+    margin: auto 0;
+    list-style: none;
+}
+
+/*********************************/
+/*********************************/
+/*           MAIN & BODY         */
+/*********************************/
+/*********************************/
+
+/* ----------------------- */
+
+section { /* <<<<<<<<<<---------------------- */
+    min-height: 100%;
+    width: 80vw;
+    padding-top: 5rem;
+    margin: 0 auto;
+}
+
+section[id="comission-table"] {
+    background-color: rgba(0, 0, 0, 0.4);
+    min-height: 50%;
+    width: 100%;
+    padding: 5rem 10vw 0 10vw;
+}
+
+.section-description {
+    margin: 0 0 1rem 0;
+}
+
+ol {
+    padding: 5px 0 5px 25px;
+}
+
+footer {
+    background-color: black;
+    overflow: hidden;
+    min-height: 20%;
+    width: 100%;
+    padding: 3rem 10vw 0 10vw;
+}
+
+/*********************************/
+/*********************************/
+/*          PRICE TABLE          */
+/*********************************/
+/*********************************/
+
+.table-flex {
+    border: 1px solid var(--bg-cl2);
+    max-width: 100%;
+    margin: auto;
+    padding: 30px 0;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+}
+
+div[class~="table-flex"]::after {
+    content: "";
+    width: 430px;
+}
+
+table {
+    width: 430px;
+    font-size: 0.85rem;
+    text-align: right;
+    vertical-align: middle;
+    height: calc(100% - 2rem);
+    border-collapse: collapse;
+}
+
+caption {
+    background-color: var(--bg-cl1);
+    height: 2rem;
+    line-height: 2rem;
+    border: 3px solid var(--bg-cl3);
+}
+
+td, th {
+    background-color: var(--bg-cl2);
+    border-bottom: 1px solid var(--bg-cl1);
+}
+
+table th, table td {
+    height: 3rem;
+    padding: 0.3rem 0.7rem;
+}
+
+thead th, thead td {
+    background-color: var(--bg-cl3);
+    color: var(--cl1);
+    height: 3.3rem;
+    padding-bottom: 7px;
+    font-weight: bold;
+    vertical-align: bottom;
+    border-bottom: 1px solid black;
+}
+
+th {
+    text-align: left;
+}
+
+.table-header span {
+    font-size: var(--fs06rem);
+}
+
+th.h-row {
+    width: 35%;
+}
+
+td.d-row.t-left {
+    width: 10%;
+}
+
+.points {
+    font-size: var(--fs07rem);
+    height: 30px;
+    width: 30px;
+    line-height: calc(30px - 2px);
+    border-radius: 50%;
+    border: 1px solid var(--cl1);
+    margin: 0 auto;
+    text-align: center;
+    float: left;
+}
+
+.price::before {
+    content: "R$ ";
+    font-size: var(--fs06rem);
+}
+
+.discount::after {
+    content: "% off";
+    font-size: var(--fs06rem);
+}
+
+.table-detail:not(.table-detail.price) {
+    font-size: var(--fs07rem);
+}
+
+.table-detail.price, .table-detail.discount {
+    color: var(--cl3);
+    margin-top: 2px;
+}
+
+tr > th.monthly:hover:after {
+    content: "comissão mensal";
+    color: gray;
+    font-size: var(--fs06rem);
+    font-style: italic;
+}
+
+tr > th.spot:hover:after {
+    content: "comissão no ato";
+    color: var(--cl3);
+    font-size: var(--fs06rem);
+    font-style: italic;
+}
+
+/*********************************/
+/*********************************/
+/*        SALE FLOWCHART         */
+/*********************************/
+/*********************************/
+#flowchart {
+    min-height: 100vh;
+}
+
+#sale-flowchart.grid {
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+.upsell-name,
+#wol-comission > div:first-of-type,
+#live-comission > div:first-of-type,
+#lifetime-comission > div:first-of-type {
+    width: 145px;
+    margin: 0 auto 0 0;
+    border: 1px solid white;
+    border-radius: 10px;
+    text-align: center;
+    font-size: var(--fs06rem);
+}
+
+.upsell-name.price {
+    background-color: var(--bg-cl1);
+    color: rgba(255, 255, 255, 0.7);
+    width: 80%;
+    margin: 0 auto 10px auto;
+    border: 1px solid var(--bg-cl1);
+}
+
+.upsell-name.price::before {
+    content: "Total R$ ";
+}
+
+.upsell {
+    background-color: var(--bg-cl2);
+    width: 140px;
+    border-radius: 10px 0 0 10px;
+}
+
+.payment-flowchart {
+    justify-content: center;
+    align-items: center;
+}
+
+.payment-flowchart > .level:first-of-type > .upsell {
+    background-color: var(--bg-cl1);
+}
+
+.payment-flowchart:nth-of-type(1) .upsell p,
+.payment-flowchart:nth-of-type(2) .upsell p {
+    color: var(--bg-cl3);
+}
+
+.payment-flowchart:nth-of-type(3) .upsell p,
+.payment-flowchart:nth-of-type(4) .upsell p {
+    color: #E01A4F;
+}
+
+.total {
+    background-color: var(--bg-cl3);
+    width: 150px;
+    border-radius: 0 10px 10px 0;
+}
+
+.payment-flowchart > .level:first-of-type > .total {
+    border-radius: 10px;
+    margin: 10px 0 10px 0;
+}
+
+.level > div {
+    margin: 0px 0px 10px 0px;
+    padding: 10px;
+}
+
+.level article > div {
+    margin: auto 0;
+}
+
+#sale-flowchart .points {
+    font-size: var(--fs06rem);
+    height: 23px;
+    width: 23px;
+    line-height: calc(23px - 1px);
+    opacity: 0.3;
+}
+
+.payment-flowchart > p:first-of-type {
+     width: 100%;
+     padding: 2px;
+     border: 3px solid var(--bg-cl3);
+}
+
+.payment-flowchart:nth-of-type(3) > p:first-of-type,
+.payment-flowchart:nth-of-type(4) > p:first-of-type {
+    border: 3px solid #E01A4F;
+}
+
+.payment-flowchart:nth-of-type(3)  div.total,
+.payment-flowchart:nth-of-type(4)  div.total {
+    background-color: #E01A4F;
+}
+
+div.upsell article {
+    margin: 5px 0 0 0;
+}
+
+/*********************************/
+/*********************************/
+/*            COMISSÃO           */
+/*********************************/
+/*********************************/
+
+#comission-table h3 {
+    font-weight: normal;
+    font-size: var(--fs075rem);
+}
+
+#comission-table > div:not(.section-description) {
+    font-size: 0.8rem;
+    text-align: center;
+}
+
+#comission-table > div:not(.section-description) >
+div > div:first-of-type {
+    width: 100%;
+    padding: 3px 0;
+    margin: 0 0 10px 0;
+    border: 1px solid var(--bg-cl3);
+}
+
+#comission-body > div {
+    height: 2rem;
+    margin: 10px auto;
+}
+
+#comission-head, #comission-body > div > div {
+    background-color: var(--bg-cl2);
+    width: 320px;
+    border-radius: 50px;
+}
+
+#live-comission #comission-head,
+#live-comission #comission-body > div > div[class]{
+    width: 200px;
+}
+
+#comission-head {
+    background-color: unset;
+    color: var(--cl2);
+    margin: 0 0 0 auto
+}
+
+#comission-body > div > div:last-of-type div, #comission-head > div {
+    width: 25%;
+    margin: auto auto;
+}
+
+#comission-body > div > div:first-of-type {
+    height: 20px;
+    width: 20px;
+    margin: auto 10px auto 0;
+    border-radius: 50%;
+}
+
+/*********************************/
+/*********************************/
+/*         MEDIA FEATURE         */
+/*********************************/
+/*********************************/
+
+@media (max-width: 1350px) {
+    #sale-flowchart.grid {
+        grid-template-columns: repeat(2, 300px);
+    }
+}
