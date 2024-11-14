@@ -26,3 +26,4 @@ SKILLS:
 . . flexbox
 . . grid
 . . media query
+. . responsiveness
