@@ -4,11 +4,11 @@ DESCRIPTION:
 webpage with some information about prices and comission
 
 PHASE:
-after Responsive Web Design Certification - freeCodeCamp
+Responsive Web Design Certification - freeCodeCamp
 
 FEATURES:
-. simple homepage and webpage
-. tables
+. homepage
+. more complex and beatiful looking tables
 
 LANGUAGE:
 html, css
