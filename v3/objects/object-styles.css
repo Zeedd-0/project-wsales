@@ -1,3 +1,17 @@
+:root {
+    --bg-cl1: #051524;
+    --bg-cl2: #112840;
+    --bg-cl3: #0659ED;
+    --bg-cl4: #631877;
+    --cl1: white;
+    --cl2: #59A8D2;
+    --cl3: #91929C;
+    --fs06rem: 0.6rem;
+    --fs07rem: 0.7rem;
+    --fs075rem: 0.75rem;
+
+}
+
 * {
     box-sizing: border-box;
     padding: 0;
@@ -6,66 +20,10 @@
 }
 
 body {
-    background-color: #051524;
+    background-color: var(--bg-cl1);
     color: white;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
-
-/* ================================================== */
-
-.text-content {
-    border: 1px solid green;
-}
-
-.section-content {
-    border: 1px solid red;
-}
-
-/* ================================================== */
-main {
-    margin: 50px 0;
-    display: flex;
-    flex-direction: column;
-    gap: 100px;
-}
-
-section {
-    /* border: 1px solid pink; */
-    margin: auto;
-    width: 90%;
-    min-width: 440px; /*@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-
-.text-content {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-}
-
-.section-content {
-    padding: 25px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-}
-
-#flowchart-section > div ol {
-    margin: 5px 0 0 0;
-    padding: 0 0 0 30px;
-}
-#flowchart-section .section-content > div {
-    display: flex;
-    flex-direction: row;
-    gap: 20px;
-}
-
-
-
 
 
 
