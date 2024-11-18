@@ -1,0 +1,506 @@
+:root {
+    --bg-cl1: #051524;
+    --bg-cl2: #112840;
+    --bg-cl3: #0659ED;
+    --bg-cl4: #631877;
+    --cl1: white;
+    --cl2: #59A8D2;
+    --cl3: #91929C;
+    --fs06rem: 0.6rem;
+    --fs07rem: 0.7rem;
+    --fs075rem: 0.75rem;
+
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--bg-cl1);
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+
+
+
+
+/* ======================================================= */
+/* =====================             ===================== */
+/* ===================== PRICE TABLE ===================== */
+/* =====================             ===================== */
+/* ================== STRUCTURE: LAYOUT ================== */
+.price-table, .price-table .table,
+.price-table .table-header,
+.price-table .table-body,
+.tcol-header, .tcol-header > div,
+.tcol-points, .tcol-points > div,
+.tcol-price, .tcol-price > div {
+    display: flex;
+}
+.price-table, .price-table .table,
+.tcol-header,
+.tcol-points,
+.tcol-price {
+    flex-direction: column;
+}
+
+.price-table .table-header > div,
+.tcol-header, .tcol-header div,
+.tcol-points, .tcol-points div,
+.tcol-price, .tcol-price > div:not([class="double-row"]) {
+    flex: 1;
+}
+.price-table .double-row {
+    flex: 2;
+}
+
+.price-table .table-caption {
+    text-align: center;
+}
+
+.price-table .table-header {
+    text-align: end;
+    align-items: flex-end;
+}
+.price-table .table-header > div:nth-child(1) {
+    text-align: start;
+}
+.price-table .table-header > div:nth-child(2) {
+    text-align: center;
+}
+
+.price-table .table-body {
+    justify-content: space-between;
+}
+
+.tcol-header > div,
+.tcol-points > div,
+.tcol-price > div {
+    align-items: center;
+}
+.tcol-points > div {
+    justify-content: center;
+}
+.tcol-price > div {
+    justify-content: flex-end;
+}
+.tcol-price li {
+    text-align: right;
+}
+
+/* ================== STRUCTURE: SHAPE ================== */
+.price-table {
+    width: 430px;
+}
+
+.price-table .table-caption {
+    height: 2rem;
+}
+.price-table .table-header {
+    height: 3rem;
+}
+
+.wol-price-table .table-body {
+    height: 145px;
+}
+.live-price-table .table-body {
+    height: 96px;
+}
+
+/* ================== DETAILS ================== */
+.price-table {
+    box-sizing: border-box;
+    color: white;
+    font-family: Verdana, sans-serif;
+    font-size: 0.85rem;
+    background-color: #112840;
+    /* position */
+    padding: 0; margin: 0;
+}
+
+.price-table .table-caption {
+    font-size: 1rem;
+    background-color: #051524;
+    border: 2px solid #0659ED;
+    line-height: 2rem; /* position */
+}
+
+.price-table .table-header {
+    background-color: #0659ED;
+    padding: 0.3rem 0.7rem;
+}
+
+.price-table .table-header *,
+.tcol-header * {
+    font-weight: bold;
+}
+
+.wol-price-table .table-body,
+.live-price-table .table-body {
+    background-color: #112840;
+}
+
+.tcol-header > div,
+.tcol-points > div,
+.tcol-price > div {
+    border-top: 2px solid #051524;
+}
+
+.tcol-header > div {
+    padding-left: 0.7rem; /* position */
+}
+.tcol-price:last-child > div {
+    padding-right: 0.7rem; /* position */
+}
+
+.tcol-price li,
+.tcol-price ul {
+    /* position */
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+/* ================== DETAILS: CONTENT ================== */
+.price-table .table-header .points {
+    font-size: 0.6rem;
+    display: block;
+}
+.price-table .table-header .points::before {
+    content: "(";
+    font-size: 0.6rem;
+}
+.price-table .table-header .points::after {
+    content: " pt)";
+    font-size: 0.6rem;
+}
+
+.tcol-header .comission-detail {
+    display: none;
+    color: gray;
+    font-size: 0.6rem;
+    font-style: italic;;
+}
+.tcol-header > div:hover .comission-detail {
+    display: block;
+}
+
+.price-table div.circle-shape {
+    font-size: 0.7rem;
+    border: 1px solid white;
+    border-radius: 50%;
+    height: 30px;
+    flex: 0 0 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.price-table span[data-value="test"]::before {
+    content: "R$ ";
+    font-size: 0.6rem;
+}
+.price-table span[data-value="test"].monthly-price:after {
+    content: "/mês";
+    font-size: 0.7rem;
+}
+
+.price-table .price-detail {
+    color: grey;
+}
+.price-table .price-detail.discount {
+    font-size: 0.7rem;
+}
+.discount::after {
+    content: "% off";
+    color: grey;
+    font-size: 0.6rem;
+}
+/* ======================================================= */
+/* ======================================================= */
+
+
+
+/* ======================================================= */
+/* =====================             ===================== */
+/* =====================  FLOWCHART  ===================== */
+/* =====================             ===================== */
+/* ================== STRUCTURE: LAYOUT ================== */
+.flowchart, .upsell-level,
+.upsell-product, .upsell-total,
+.upsell-top, .upsell-bottom {
+    display: flex;
+}
+.flowchart,
+.upsell-product, .upsell-total {
+    flex-direction: column;
+}
+
+.upsell-product,
+.upsell-total {
+    flex: 1;
+}
+.upsell-top {
+    flex: 2;
+}
+.upsell-bottom {
+    flex: 3;
+}
+
+.flowchart {
+    gap: 10px;
+}
+.upsell-top,
+.upsell-bottom {
+    gap: 25px
+}
+
+.flowchart-caption {
+    text-align: center;
+}
+.upsell-product, .upsell-total,
+.upsell-top, .upsell-bottom {
+    align-items: center;
+}
+
+/* ================== STRUCTURE: SHAPE ================== */
+.flowchart {
+    width: 300px;
+}
+
+.upsell-level {
+    height: 90px;
+}
+
+/* ================== DETAILS ================== */
+.flowchart {
+    box-sizing: border-box;
+    color: white;
+    font-family: Verdana, sans-serif;
+    font-size: 0.85rem;
+    /* position */
+    padding: 0; margin: 0;
+}
+
+.flowchart-caption {
+    font-size: 0.6rem;
+    color: white;
+    border-radius: 10px;
+    text-transform: uppercase;
+    padding: 2px; /* position */
+}
+div[id^="flowchart-lifetimeSubs-"] .flowchart-caption {
+    border: 3px solid #0659ED;
+}
+div[id^="flowchart-yearSubs-"] .flowchart-caption {
+    border: 3px solid #E01A4F;
+}
+
+.upsell-level {
+    justify-content: space-between;
+    margin: 0 7px; /* position */
+}
+
+.upsell-product {
+    background-color: #112840;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.upsell-total {
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+div[id^="flowchart-lifetimeSubs-"] .upsell-total {
+    background-color: #0659ED;
+}
+div[id^="flowchart-yearSubs-"] .upsell-total {
+    background-color: #E01A4F;
+}
+
+.upsell-level.first .upsell-product {
+    background-color: #051524;
+}
+.upsell-level.first .upsell-total {
+    border-radius: 10px;
+}
+
+.upsell-bottom li,
+.upsell-bottom ul {
+    /* position */
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+/* ================== DETAILS: CONTENT ================== */
+.flowchart div.circle-shape {
+    font-size: 0.6rem;
+    opacity: 0.3;
+    border: 1px solid white;
+    border-radius: 50%;
+    height: 23px;
+    width: 23px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.flowchart .upsell-top > div {
+    background-color: #051524;
+    height: 14px;
+    width: 100px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.flowchart .upsell-top span[class^="upsell-detail-"] {
+    font-size: 0.6rem;
+}
+.flowchart .upsell-top .upsell-detail-total::before {
+    content: 'Total R$ ';
+}
+div[id^="flowchart-lifetimeSubs-"] .upsell-top .upsell-detail-product::before {
+    content: '+ ';
+    color: #3b82fc;
+}
+div[id^="flowchart-yearSubs-"] .upsell-top .upsell-detail-product::before {
+    content: '+ ';
+    color: #3b82fc;
+}
+
+.flowchart span[data-value="test"] {
+    font-size: 1rem;
+}
+.flowchart span[data-value="test"]::before {
+    content: "R$ ";
+    font-size: 0.6rem;
+}
+.flowchart span[data-value="test"].monthly-price:after {
+    content: "/mês";
+    font-size: 0.7rem;
+}
+.flowchart span[data-value="test"].plus-sign::after {
+    content: "+";
+    font-size: 0.7rem;
+}
+/* ======================================================= */
+/* ======================================================= */
+
+
+
+/* ======================================================= */
+/* =====================             ===================== */
+/* =====================  COMISSION  ===================== */
+/* =====================             ===================== */
+/* ================== STRUCTURE: LAYOUT ================== */
+div[id^="comission-table-"],
+.comission-header,
+.comission-body > div,
+.comission-values {
+    display: flex;
+}
+div[id^="comission-table-"] {
+    flex-direction: column;
+    text-align: center;
+}
+
+.comission-header,
+.comission-values {
+    justify-content: space-around;
+    align-items: center;
+}
+
+.comission-title {
+    align-self: flex-end;
+}
+
+/* ================== STRUCTURE: SHAPE ================== */
+div[id^="comission-table-"] {
+    width: 350px;
+}
+div[id="comission-table-live"] {
+    width: 230px;
+}
+
+.comission-title,
+.comission-header,
+.comission-values {
+    width: 320px;
+}
+div[id="comission-table-live"] .comission-title,
+div[id="comission-table-live"] .comission-header,
+div[id="comission-table-live"] .comission-values {
+    width: 200px;
+}
+
+.comission-body > div,
+.comission-values {
+    height: 2rem;
+}
+
+/* ================== DETAILS ================== */
+div[id^="comission-table-"] {
+    box-sizing: border-box;
+    color: white;
+    font-family: Verdana, sans-serif;
+    /* position */
+    padding: 0; margin: 0;
+}
+
+div[id^="comission-table-"] *:not(.comission-title) {
+    font-size: 0.8rem;
+}
+
+.comission-title {
+    font-size: 0.6rem;
+    border: 1px solid #0659ED;
+    border-radius: 10px;
+    text-transform: uppercase;
+    /* position */
+    padding: 3px 0;
+    margin: 0 0 10px 0;
+}
+
+.comission-header {
+    background-color: unset;
+    color: #59A8D2;
+    /* position */
+    margin: 0 0 0 30px;
+}
+
+.comission-body > div {
+    margin: 10px auto; /* position */
+}
+
+.comission-values {
+    background-color: #112840;
+    border-radius: 50px;
+}
+
+/* ================== DETAILS: CONTENT ================== */
+.comission-circle {
+    height: 20px;
+    width: 20px;
+    margin: auto 10px auto 0;
+    border-radius: 50%;
+}
+.comission-circle.white {
+    background-color: white;
+}
+.comission-circle.blue {
+    background-color: #05299E;
+}
+.comission-circle.gold {
+    background-color: #FCA311;
+}
+.comission-circle.black {
+    background-color: black;
+    border: 1px solid rgb(109, 103, 103);
+}

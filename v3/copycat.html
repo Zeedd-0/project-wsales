@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="pt">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Suporte ao agente da WSP">
+    <title>Suporte WSP</title>
+    <link rel="stylesheet" href="./copycat.css">
+    <script src="./script.js" defer></script>
+  </head>
+
+
+  <body>
+    <header class="flex">
+      <nav>
+        <ul class="flex">
+          <li><a href="#price-table" class="block">Sobre</a></li>
+          <li><a href="#flowchart" class="block">Preços</a></li>
+          <li><a href="#comission-table" class="block">Comissões</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <div>
+      </div>
+      <section id="price-table">
+        <div class="section-description">
+          <h2>Tabela de Preços</h2>
+          <p>Preços atualizados em 26/08/2024.</p>
+        </div>
+
+        <div class="flex table-flex flex-row">
+
+          <table id="table-lifetime">
+            <caption><h3 class="f-normal">Vitalício</h3></caption>
+            <thead>
+              <tr class="table-header">
+                <th class="h-row">forma de<br> pagamento</td>
+                <td class="d-row t-left">pontos</td>
+                <td class="d-row">wol</td>
+                <td class="d-row"><span data-value="wol-multi-points"></span><br>multi</td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th class="monthly">recorrente<br></th>
+                <td><div class="points t-center">0,75</div></td>
+                <td rowspan="2" class="price"><span class="table-detail" data-value="wol-lifetime-monthly-price-month">/mês </span><p class="table-detail price">3.192</p>
+                </td>
+                <td rowspan="2" class="price">50<span class="table-detail">/mês </span><div class="table-detail price">600</div>
+              </tr>
+              <tr>
+                <th class="spot">integral<br></th>
+                <td><div class="points t-center">2,5</div></td>
+              </tr>
+              <tr>
+                <th class="spot">à vista<br></th>
+                <td><div class="points t-center">3,0</div></td>
+                <td class="price">2.872</span><p class="table-detail discount">10</p></td>
+                <td class="price">600</span></td>
+              </tr>
+            </tbody>
+          </table>
+
+          <table id="table-yearly">
+            <caption><h3 class="f-normal">Anual</h3></caption>
+            <thead>
+              <tr class="table-header">
+                <th class="h-row">forma de<br> pagamento</td>
+                <td class="d-row t-left">pontos</td>
+                <td class="d-row">wol</td>
+                <td class="d-row"><span data-value="wol-multi-points"></span><br>multi</td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th class="monthly">recorrente<br></th>
+                <td><div class="points">0,5</div></td>
+                <td rowspan="2" class="price">162<span class="table-detail">/mês</span><p class="table-detail price">1.994</p>
+                </td>
+                <td rowspan="2" class="price">50<span class="table-detail">/mês</span><div class="table-detail price">600</div>
+              </tr>
+              <tr>
+                <th class="spot">integral<br></th>
+                <td><div class="points">2,0</div></td>
+              </tr>
+              <tr>
+                <th class="spot">à vista<br></th>
+                <td><div class="points">2,5</div></td>
+                <td class="price">1.652</span><p class="table-detail discount">10</p></td>
+                <td class="price">570</span></td>
+              </tr>
+            </tbody>
+          </table>
+
+          <table id="table-live">
+            <caption><h3 class="f-normal">Live</h3></caption>
+            <thead>
+              <tr class="table-header">
+                <th class="h-row"></td>
+                <td class="d-row h-points t-left">pontos</td>
+                <td class="d-row">live</td>
+                <td class="d-row"><span data-value="live-multi-points"></span><br>multi</td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th class="spot">matrícula<br></th>
+                <td rowspan="2"><div class="points t-center">1,0</div></td>
+                <td class="price">250</span></td>
+                <td class="price">60</span></td>
+              </tr>
+              <tr>
+                <th>mensalidade<br></th>
+                <td class="price">198</span></td>
+                <td class="price">60</span></td>
+              </tr>
+            </tbody>
+          </table>
+
+        </div>
+      </section>
+
+      <section id="flowchart">
+        <div class="section-description">
+          <h2>Fluxograma de Fechamento</h2>
+          <p>Baseado no fluxograma de Lettícia Nonato.</p>
+          <ol>
+            <li>Vitalício
+            <li>Nubank</li>
+            <li>Cartão de Crédito</li>
+            <li>Pagamento Recorrente</li>
+          </ol>
+        </div>
+
+        <div id="sale-flowchart" class="grid">
+
+          <div class="flex flex-column payment-flowchart">
+            <p class="upsell-name">VITALÍCIO À VISTA</p>
+            <div class="flex flex-row level">
+              <div class="upsell">
+              </div>
+
+              <div class="total">
+                <p class="upsell-name price">2.872</p>
+                <article class="flex flex-row space-between">
+                  <div class="price">2.872<span class="table-detail"></span></div>
+                  <div class="points">3,0</div>
+                </article>
+              </div>
+            </div>
+
+            <!-- <p class="upsell-name">wol multi</p> -->
+            <div class="flex flex-row level">
+              <div class="upsell">
+                <p class="upsell-name price name">wol multi</p>
+                <article class="flex flex-row space-between">
+                  <div class="price">600<span class="table-detail"></span></div>
+                  <div class="points" data-value="wol-multi-points"></div>
+                </article>
+              </div>
+
+              <div class="total">
+                <p class="upsell-name price">3.472</p>
+                <article class="flex flex-row space-between">
+                  <div class="price">3.472<span class="table-detail"></span></div>
+                  <div class="points">3,5</div>
+                </article>
+              </div>
+            </div>
+
+            <!-- <p class="upsell-name">live</p> -->
+            <div class="flex flex-row level">
+              <div class="upsell">
+                <p class="upsell-name price name">live</p>
+                <article class="flex flex-row space-between">
+                  <div class="price">250<span class="table-detail">+</span><br><span class="price">198</span><span class="table-detail">/mês</span></div>
+                  <div class="points">1,0</div>
+                </article>
+              </div>
+
+              <div class="total">
+                <p class="upsell-name price">3.722</p>
+                <article class="flex flex-row space-between">
+                  <div class="price">3.722<span class="table-detail">+</span><br><span class="price">198</span><span class="table-detail">/mês</span></div>
+                  <div class="points">4,5</div>
+                </article>
+              </div>
+            </div>
+
+            <!-- <p class="upsell-name">live multi</p> -->
+            <div class="flex flex-row level">
+              <div class="upsell">
+                <p class="upsell-name price name">live multi</p>
+                <article class="flex flex-row space-between">
+                  <div class="price">60<span class="table-detail">+</span><br><span class="price">60</span><span class="table-detail">/mês</span></div>
+                  <div class="points">0,5</div>
+                </article>
+              </div>
+
+              <div class="total">
+                <p class="upsell-name price">3.782</p>
+                <article class="flex flex-row space-between">
+                  <div class="price">3.782<span class="table-detail">+</span><br><span class="price">258</span><span class="table-detail">/mês</span></div>
+                  <div class="points">5,0</div>
+                </article>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="flex flex-column payment-flowchart">
+            <p class="upsell-name">VITALÍCIO PARCELADO</p>
+            <div class="flex flex-row level">
+              <div class="upsell">
+              </div>
+
+              <div class="total">
+                <p class="upsell-name price" data-value="wol-lifetime-monthly-price-year"></p>
+                <article class="flex flex-row space-between">
+                  <div class="price"><span class="table-detail"  data-value="wol-lifetime-monthly-price-month">/mês</span></div>
+                  <div class="points">2,5</div>
+                </article>
+              </div>
+            </div>
+
+            <p class="upsell-name">wol multi</p>
+            <div class="flex flex-row level">
+              <div class="upsell">
+                <p>+</p>
+                <article class="flex flex-row space-between">
+                  <div class="price">50<span class="table-detail">/mês</span></div>
+                  <div class="points" data-value="wol-multi-points"></div>
+                </article>
+              </div>
+
+              <div class="total">
+                <p class="upsell-name price">3.792</p>
+                <article class="flex flex-row space-between">
+                  <div class="price">316<span class="table-detail">/mês</span></div>
+                  <div class="points">3,0</div>
+                </article>
+              </div>
+            </div>
+
+            <p class="upsell-name">live</p>
+            <div class="flex flex-row level">
+              <div class="upsell">
+                <p>+</p>
+                <article class="flex flex-row space-between">
+                  <div class="price">250<span class="table-detail">+</span><br><span class="price">198</span><span class="table-detail">/mês</span></div>
+                  <div class="points">1,0</div>
+                </article>
+              </div>
+
+              <div class="total">
+                <p class="upsell-name price">4.042</p>
+                <article class="flex flex-row space-between">
+                  <div class="price">250<span class="table-detail">+</span><br><span class="price">514</span><span class="table-detail">/mês</span></div>
+                  <div class="points">4,0</div>
+                </article>
+              </div>
+            </div>
+
+            <p class="upsell-name">live multi</p>
+            <div class="flex flex-row level">
+              <div class="upsell">
+                <p>+</p>
+                <article class="flex flex-row space-between">
+                  <div class="price">60<span class="table-detail">+</span><br><span class="price">60</span><span class="table-detail">/mês</span></div>
+                  <div class="points">0,5</div>
+                </article>
+              </div>
+
+              <div class="total">
+                <p class="upsell-name price">4.102</p>
+                <article class="flex flex-row space-between">
+                  <div class="price">310<span class="table-detail">+</span><br><span class="price">574</span><span class="table-detail">/mês</span></div>
+                  <div class="points">4,5</div>
+                </article>
+              </div>
+            </div>
+          </div>
+
+          <div class="flex flex-column payment-flowchart">
+
+            <p class="upsell-name">ANUAL À VISTA</p>
+            <div class="flex flex-row level">
+              <div class="upsell">
+              </div>
+
+              <div class="total">
+                <p class="upsell-name price">1.652</p>
+                <article class="flex flex-row space-between">
+                  <div class="price">1.652<br><span class="table-detail"></span></div>
+                  <div class="points">2,5</div>
+                </article>
+              </div>
+            </div>
+
+            <p class="upsell-name">wol multi</p>
+            <div class="flex flex-row level">
+              <div class="upsell">
+                <p>+</p>
+                <article class="flex flex-row space-between">
+                  <div class="price">570<span class="table-detail"></span></div>
+                  <div class="points" data-value="wol-multi-points"></div>
+                </article>
+              </div>
+
+              <div class="total">
+                <p class="upsell-name price">2.222</p>
+                <article class="flex flex-row space-between">
+                  <div class="price">2.222<span class="table-detail"></span></div>
+                  <div class="points">3,0</div>
+                </article>
+              </div>
+            </div>
+
+            <p class="upsell-name">live</p>
+            <div class="flex flex-row level">
+              <div class="upsell">
+                <p>+</p>
+                <article class="flex flex-row space-between">
+                  <div class="price">250<span class="table-detail">+</span><br><span class="price">198</span><span class="table-detail">/mês</span></div>
+                  <div class="points">1,0</div>
+                </article>
+              </div>
+
+              <div class="total">
+                <p class="upsell-name price">2.472</p>
+                <article class="flex flex-row space-between">
+                  <div class="price">2.472<span class="table-detail">+</span><br><span class="price">198</span><span class="table-detail">/mês</span></div>
+                  <div class="points">4,0</div>
+                </article>
+              </div>
+            </div>
+
+            <p class="upsell-name">live multi</p>
+            <div class="flex flex-row level">
+              <div class="upsell">
+                <p>+</p>
+                <article class="flex flex-row space-between">
+                  <div class="price">60<span class="table-detail">+</span><br><span class="price">60</span><span class="table-detail">/mês</span></div>
+                  <div class="points">0,5</div>
+                </article>
+              </div>
+
+              <div class="total">
+                <p class="upsell-name price">2.532</p>
+                <article class="flex flex-row space-between">
+                  <div class="price">2.532<span class="table-detail">+</span><br><span class="price">258</span><span class="table-detail">/mês</span></div>
+                  <div class="points">4,5</div>
+                </article>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="flex flex-column payment-flowchart">
+            <p class="upsell-name">ANUAL PARCELADO</p>
+            <div class="flex flex-row level">
+              <div class="upsell">
+              </div>
+
+              <div class="total">
+                <p class="upsell-name price">1.994</p>
+                <article class="flex flex-row space-between">
+                  <div class="price">162<span class="table-detail">/mês</span></div>
+                  <div class="points">2,0</div>
+                </article>
+              </div>
+            </div>
+
+            <p class="upsell-name">wol multi</p>
+            <div class="flex flex-row level">
+              <div class="upsell">
+                <p>+</p>
+                <article class="flex flex-row space-between">
+                  <div class="price">50<span class="table-detail">/mês</span></div>
+                  <div class="points" data-value="wol-multi-points"></div>
+                </article>
+              </div>
+
+              <div class="total">
+                <p class="upsell-name price">2.544</p>
+                <article class="flex flex-row space-between">
+                  <div class="price">212<span class="table-detail">/mês</span></div>
+                  <div class="points">2,5</div>
+                </article>
+              </div>
+            </div>
+
+            <p class="upsell-name">live</p>
+            <div class="flex flex-row level">
+              <div class="upsell">
+                <p>+</p>
+                <article class="flex flex-row space-between">
+                  <div class="price">250<span class="table-detail">+</span><br><span class="price">198</span><span class="table-detail">/mês</span></div>
+                  <div class="points">1,0</div>
+                </article>
+              </div>
+
+              <div class="total">
+                <p class="upsell-name price">2.794</p>
+                <article class="flex flex-row space-between">
+                  <div class="price">250<span class="table-detail">+</span><br><span class="price">410</span><span class="table-detail">/mês</span></div>
+                  <div class="points">4,0</div>
+                </article>
+              </div>
+            </div>
+
+            <p class="upsell-name">live multi</p>
+            <div class="flex flex-row level">
+              <div class="upsell">
+                <p>+</p>
+                <article class="flex flex-row space-between">
+                  <div class="price">60<span class="table-detail">+</span><br><span class="price">60</span><span class="table-detail">/mês</span></div>
+                  <div class="points">0,5</div>
+                </article>
+              </div>
+
+              <div class="total">
+                <p class="upsell-name price">2.854</p>
+                <article class="flex flex-row space-between">
+                  <div class="price">310<span class="table-detail">+</span><br><span class="price">470</span><span class="table-detail">/mês</span></div>
+                  <div class="points">4,5</div>
+                </article>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <section id="comission-table">
+        <div class="section-description">
+          <h2>Tabela de Comissões</h2>
+          <p>Comissões atualizadas em 26/08/2024.</p>
+        </div>
+
+        <div class="flex table-flex flex-row" style="border: none">
+          <div id="lifetime-comission" class="flex flex-column">
+            <div><h3>vitalício</h3></div>
+            <div id="comission-head" class="flex flex-row">
+                <div><p>cheio</p></div>
+                <div><p>nubank</p></div>
+                <div><p>à vista</p></div>
+                <div><p>multi</p></div>
+            </div>
+            <div id="comission-body">
+              <div class="flex flex-row">
+                <div style="background-color: white"></div>
+                <div class="flex flex-row">
+                  <div><p>319,20</p></div>
+                  <div><p>293,66</p></div>
+                  <div><p>287,20</p></div>
+                  <div><p>60,00</p></div>
+                </div>
+              </div>
+              <div class="flex flex-row">
+                <div style="background-color: #05299E"></div>
+                <div class="flex flex-row">
+                  <div><p>469,22</p></div>
+                  <div><p>431,69</p></div>
+                  <div><p>422,18</p></div>
+                  <div><p>88,20</p></div>
+                </div>
+              </div>
+              <div class="flex flex-row">
+                <div style="background-color: #FCA311"></div>
+                <div class="flex flex-row">
+                  <div><p>564,98</p></div>
+                  <div><p>519,79</p></div>
+                  <div><p>508,34</p></div>
+                  <div><p>106,20</p></div>
+                </div>
+              </div>
+              <div class="flex flex-row">
+                <div style="background-color: black; border: 1px solid #292929"></div>
+                <div class="flex flex-row">
+                  <div><p>628,82</p></div>
+                  <div><p>578,52</p></div>
+                  <div><p>565,78</p></div>
+                  <div><p>118,20</p></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div id="wol-comission">
+            <div><h3>anual</h3></div>
+            <div id="comission-head" class="flex flex-row">
+                <div><p>cheio</p></div>
+                <div><p>nubank</p></div>
+                <div><p>à vista</p></div>
+                <div><p>multi</p></div>
+            </div>
+            <div id="comission-body">
+              <div class="flex flex-row">
+                <div style="background-color: white"></div>
+                <div class="flex flex-row">
+                  <div><p>194,40</p></div>
+                  <div><p>178,85</p></div>
+                  <div><p>165,20</p></div>
+                  <div><p>60,00</p></div>
+                </div>
+              </div>
+              <div class="flex flex-row">
+                <div style="background-color: #05299E"></div>
+                <div class="flex flex-row">
+                  <div><p>285,77</p></div>
+                  <div><p>262,91</p></div>
+                  <div><p>242,84</p></div>
+                  <div><p>88,20</p></div>
+                </div>
+              </div>
+              <div class="flex flex-row">
+                <div style="background-color: #FCA311"></div>
+                <div class="flex flex-row">
+                  <div><p>334,09</p></div>
+                  <div><p>316,56</p></div>
+                  <div><p>292,40</p></div>
+                  <div><p>106,20</p></div>
+                </div>
+              </div>
+              <div class="flex flex-row">
+                <div style="background-color: black; border: 1px solid #292929"></div>
+                <div class="flex flex-row">
+                  <div><p>382,97</p></div>
+                  <div><p>352,33</p></div>
+                  <div><p>325,44</p></div>
+                  <div><p>118,20</p></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div id="live-comission">
+            <div><h3>live</h3></div>
+            <div id="comission-head" class="flex flex-row">
+                <div><p>live</p></div>
+                <div><p>multi</p></div>
+            </div>
+            <div id="comission-body">
+              <div class="flex flex-row">
+                <div style="background-color: white"></div>
+                <div class="flex flex-row">
+                  <div><p>126,00</p></div>
+                  <div><p>30,00</p></div>
+                </div>
+              </div>
+              <div class="flex flex-row">
+                <div style="background-color: #05299E"></div>
+                <div class="flex flex-row">
+                  <div><p>185,00</p></div>
+                  <div><p>44,00</p></div>
+                </div>
+              </div>
+              <div class="flex flex-row">
+                <div style="background-color: #FCA311"></div>
+                <div class="flex flex-row">
+                  <div><p>223,00</p></div>
+                  <div><p>53,00</p></div>
+                </div>
+              </div>
+              <div class="flex flex-row">
+                <div style="background-color: black; border: 1px solid #292929"></div>
+                <div class="flex flex-row">
+                  <div><p>248,00</p></div>
+                  <div><p>59,00</p></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="section-description">
+        <p>Este site não é oficial da empresa WISER.<br>
+          E, apesar do esforço, suas informações podem não estar atualizadas.<br>
+        Nesse caso, envie um e-mail para <span>something@mail.com</span>.</p>
+      </div>
+      <div>
+        <nav>aqui vão os outros contatos</nav>
+      </div>
+    </footer>
+  </body>
+
+</html>
