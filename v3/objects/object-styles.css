@@ -1,17 +1,3 @@
-:root {
-    --bg-cl1: #051524;
-    --bg-cl2: #112840;
-    --bg-cl3: #0659ED;
-    --bg-cl4: #631877;
-    --cl1: white;
-    --cl2: #59A8D2;
-    --cl3: #91929C;
-    --fs06rem: 0.6rem;
-    --fs07rem: 0.7rem;
-    --fs075rem: 0.75rem;
-
-}
-
 * {
     box-sizing: border-box;
     padding: 0;
@@ -24,8 +10,6 @@ body {
     color: white;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
-
-
 
 
 
@@ -132,7 +116,7 @@ body {
 
 .price-table .table-header {
     background-color: #0659ED;
-    padding: 0.3rem 0.7rem;
+    padding: 0.3rem 0.7rem; /* position */
 }
 
 .price-table .table-header *,
@@ -201,11 +185,11 @@ body {
     justify-content: center;
 }
 
-.price-table span[data-value="test"]::before {
+.price-table span[data-value*="price"]::before {
     content: "R$ ";
     font-size: 0.6rem;
 }
-.price-table span[data-value="test"].monthly-price:after {
+.price-table span[data-value*="price"].monthly-price:after {
     content: "/mês";
     font-size: 0.7rem;
 }
@@ -241,6 +225,10 @@ body {
     flex-direction: column;
 }
 
+.upsell-level {
+    justify-content: space-between;
+}
+
 .upsell-product,
 .upsell-total {
     flex: 1;
@@ -255,9 +243,11 @@ body {
 .flowchart {
     gap: 10px;
 }
-.upsell-top,
+.upsell-top {
+    justify-content: center;
+}
 .upsell-bottom {
-    gap: 25px
+    justify-content: space-between;
 }
 
 .flowchart-caption {
@@ -275,6 +265,10 @@ body {
 
 .upsell-level {
     height: 90px;
+}
+
+.upsell-bottom {
+    width: 143px;
 }
 
 /* ================== DETAILS ================== */
@@ -302,7 +296,6 @@ div[id^="flowchart-yearSubs-"] .flowchart-caption {
 }
 
 .upsell-level {
-    justify-content: space-between;
     margin: 0 7px; /* position */
 }
 
@@ -330,6 +323,9 @@ div[id^="flowchart-yearSubs-"] .upsell-total {
     border-radius: 10px;
 }
 
+.upsell-bottom {
+    padding: 0 15px; /* position */
+}
 .upsell-bottom li,
 .upsell-bottom ul {
     /* position */
@@ -341,8 +337,8 @@ div[id^="flowchart-yearSubs-"] .upsell-total {
 /* ================== DETAILS: CONTENT ================== */
 .flowchart div.circle-shape {
     font-size: 0.6rem;
-    opacity: 0.3;
-    border: 1px solid white;
+    opacity: 0.5;
+    border: 1px solid rgb(224, 224, 224);
     border-radius: 50%;
     height: 23px;
     width: 23px;
@@ -372,21 +368,21 @@ div[id^="flowchart-lifetimeSubs-"] .upsell-top .upsell-detail-product::before {
 }
 div[id^="flowchart-yearSubs-"] .upsell-top .upsell-detail-product::before {
     content: '+ ';
-    color: #3b82fc;
+    color: #E01A4F;
 }
 
-.flowchart span[data-value="test"] {
+.flowchart span[data-value*="price"] {
     font-size: 1rem;
 }
-.flowchart span[data-value="test"]::before {
+.flowchart span[data-value*="price"]::before {
     content: "R$ ";
     font-size: 0.6rem;
 }
-.flowchart span[data-value="test"].monthly-price:after {
+.flowchart span[data-value*="price"].monthly-price:after {
     content: "/mês";
     font-size: 0.7rem;
 }
-.flowchart span[data-value="test"].plus-sign::after {
+.flowchart span[data-value*="price"].plus-sign::after {
     content: "+";
     font-size: 0.7rem;
 }
@@ -413,7 +409,7 @@ div[id^="comission-table-"] {
 
 .comission-header,
 .comission-values {
-    justify-content: space-around;
+    justify-content: space-evenly;
     align-items: center;
 }
 
@@ -443,6 +439,11 @@ div[id="comission-table-live"] .comission-values {
 .comission-body > div,
 .comission-values {
     height: 2rem;
+}
+
+.comission-header > div,
+.comission-values > div {
+    width: 25%;
 }
 
 /* ================== DETAILS ================== */
