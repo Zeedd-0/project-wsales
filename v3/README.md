@@ -11,6 +11,14 @@ JavaScript Algorithms and Data Structures Certification - freeCodeCamp
 FEATURES:
 . homepage
 . more complex and beatiful looking tables
+. values updating strucure in js
+. !!! wanted to create a way to update and create duplicate objects so don´t need to write in html so much.
+      know can do it with innerHTMl and document.createElement + appendChild.
+      for innerHTML, saw there is a suggestion not to use for security purposes,
+      for document.createElement, thought it would be so much work because of the tables strucures.
+      looking for other way to do it, saw can achieve with some frameworks, but since I haven't started
+      studying frameworks, decided to go with what I got for now.
+      after study frameworks, will make it less stuff on html.
 
 LANGUAGE:
 html, css, javascript
@@ -27,5 +35,8 @@ SKILLS:
 . . position
 . . flexbox
 . . grid
-. . media query
 . . responsiveness
+. JAVASCRIPT
+. . class
+. . object
+. . array methods
