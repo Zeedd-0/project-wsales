@@ -11,34 +11,124 @@ body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-/* ================================================== */
-
-.text-content {
-    border: 1px solid green;
-}
-
-.section-content {
-    border: 1px solid red;
-}
 
 /* ================================================== */
-main {
-    margin: 50px 0;
+/* ==================================== HEADER */
+header {
+    background-color: rgb(3, 13, 22);
+    width: 100vw;
+    height: 4rem;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+}
+
+header nav {
+    height: 100%;
+    display: flex;
+}
+
+header ul {
+    height: 100%;
+    width: 100%;
+    margin: 0 50px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 25px;
+}
+
+header a {
+    text-decoration: none;
+    color: #919191;
+}
+
+header nav ul > li {
+    list-style: none;
+}
+
+header nav ul > li:first-of-type {
+    margin-right: auto;
+}
+
+/* ==================================== FOOTER */
+footer {
+    background-color: black; 
+    font-size: 0.8rem;
+    margin: auto;
+    padding: 50px 17% 30px 17%;
+}
+
+footer a {
+    color: rgb(67, 147, 238);
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+footer p:last-of-type {
+    margin: 15px 0 0 0;
+    text-align: center;
+}
+
+footer span {
+    font-weight: bold;
+}
+
+/* ================================================== */
+/* ==================================== MAIN INDEX */
+main[id="index-main"] {
+    /* background-color: grey; */
+}
+
+main[id="index-main"] section {
+    /* border: 1px solid red; */
+    width: 90%;
+    min-width: 440px;
+    padding: 80px 0 0 0;
+    margin: auto;
     display: flex;
     flex-direction: column;
-    gap: 100px;
 }
 
-section {
+main[id="index-main"] section ul {
+    padding: 0 0 0 30px;
+}
+
+main[id="index-main"] h2 {
+    margin-bottom: 10px;
+}
+
+main[id="index-main"] h3,
+main[id="index-main"] li {
+    margin-bottom: 5px;
+}
+
+main[id="index-main"] section:nth-of-type(2) > div {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 750px;
+}
+
+/* ==================================== MAIN INFO */
+main[id="info-main"] {
+    display: flex;
+    flex-direction: column;
+}
+
+main[id="info-main"] section {
     /* border: 1px solid pink; */
-    margin: auto;
     width: 90%;
-    min-width: 440px; /*@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
+    min-width: 440px;
+    padding: 80px 0 50px 0;
+    margin: auto;
     display: flex;
     flex-direction: column;
     gap: 20px;
 }
 
+/* ------------------------------------ */
 .text-content {
     display: flex;
     flex-direction: column;
@@ -46,12 +136,18 @@ section {
 }
 
 .section-content {
-    padding: 25px;
+    padding: 25px 25px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     gap: 20px;
+}
+
+/* ------------------------------------ specific */
+#price-table-section > .section-content,
+#flowchart-section > .section-content {
+    border: 1px solid #112840;
 }
 
 #flowchart-section > div ol {
@@ -64,6 +160,11 @@ section {
     gap: 20px;
 }
 
+#comission-section {
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 75px 5% 40px 5%;
+    width: 100%;
+}
 #comission-section .section-content {
     display: flex;
     flex-direction: row;
@@ -76,6 +177,10 @@ section {
 
 
 
+/* ======================================================= */
+/* ======================================================= */
+/*                          OBJECTS                        */
+/* ======================================================= */
 
 /* ======================================================= */
 /* =====================             ===================== */
@@ -449,6 +554,10 @@ div[id^="flowchart-yearSubs-"] .upsell-top .upsell-detail-product::before {
 .flowchart span[data-value*="price"].plus-sign::after {
     content: "+";
     font-size: 0.7rem;
+}
+
+.grey-out {
+    opacity: 0.6;
 }
 /* ======================================================= */
 /* ======================================================= */

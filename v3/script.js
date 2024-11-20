@@ -450,3 +450,30 @@ function formatNumber(number, type = '') {
     };
     return newNumber;
 }
+
+
+// ================================================== EVENT
+// ------------------------------------------- eventlisteners
+document.querySelectorAll(`#flowchart-section div[id^="flowchart-"]`)
+    .forEach(el => {
+        el.addEventListener('mouseenter', event => {
+            if (event.target.id.match(/^flowchart-/)) {
+                const CURRENT_TARGET = event.target.id;
+                document.querySelectorAll('#flowchart-section div[id^="flowchart-"]')
+                    .forEach(el => {
+                        if (el.id !== CURRENT_TARGET) {
+                            el.classList.add('grey-out');
+                        };
+                    });
+            };
+        });
+
+        el.addEventListener('mouseleave', event => {
+            document.querySelectorAll('#flowchart-section div[id^="flowchart-"]')
+            .forEach(el => {
+                el.classList.remove('grey-out');
+            });
+        });
+    });
+
+    // ------------------------------------------- function

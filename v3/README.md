@@ -18,7 +18,7 @@ FEATURES:
       for document.createElement, thought it would be so much work because of the tables strucures.
       looking for other way to do it, saw can achieve with some frameworks, but since I haven't started
       studying frameworks, decided to go with what I got for now.
-      after study frameworks, will make it less stuff on html.
+      after study frameworks, will refactor it so can have less stuff on html.
 
 LANGUAGE:
 html, css, javascript
